@@ -1,8 +1,6 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { Todo } from './todo.interface';
-import { TodoListComponent } from './todo-list.component';
-import { TodoFormComponent } from './todo-form.component';
+import { Todo } from "./todo.interface";
 
 @Component({
     selector: 'todo-app',
@@ -13,11 +11,7 @@ import { TodoFormComponent } from './todo-form.component';
     
         <todo-list [todos]="todos"></todo-list>
         <todo-form (newTask)="addTask($event)"></todo-form>`,
-        styles:['a { cursor: pointer; cursor: hand; }'],
-    directives: [
-        TodoListComponent, 
-        TodoFormComponent
-    ]
+        styles:['a { cursor: pointer; cursor: hand; }']
 })
 
 export class AppComponent {
